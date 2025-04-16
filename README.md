@@ -41,6 +41,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 --NextJs
 --TailwindCSS
---ShadCN
+--ShadCN (addbutton, sheet)
 --tw-animate-css
 --Clerk
