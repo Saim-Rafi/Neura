@@ -44,3 +44,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 --ShadCN (addbutton, sheet)
 --tw-animate-css
 --Clerk
+--cloudfare c3 (cli , worker)   ........run "npm run deploy" to deploy it
+--Firebase
+--Firebase-admin
+--we go to firebase->service account->generate new private key and add it into service_key.json
+--react-firebase-hooks
