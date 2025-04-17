@@ -29,7 +29,7 @@ interface RoomDocument extends DocumentData {
   userId: string;
 }
 
-const Sidebar = () => {
+function Sidebar (){
   const { user } = useUser();
   const [groupedData, setGroupedData] = useState<{
     owner: RoomDocument[];

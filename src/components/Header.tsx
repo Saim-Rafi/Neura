@@ -3,6 +3,7 @@ import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/clerk-reac
 import { useUser } from "@clerk/nextjs";
 import { Heading1 } from "lucide-react";
 import React from "react";
+import Breadcrums from "./Breadcrums";
 
 function Header() {
   const { user } = useUser();
@@ -15,6 +16,7 @@ function Header() {
       )}
 
       {/* Breadcrumbs */}
+      <Breadcrums />
 
       <div>
         <SignedOut>
