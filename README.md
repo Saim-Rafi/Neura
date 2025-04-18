@@ -52,3 +52,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 --LiveBlocks
 --framer-motion
 --@liveblocks/node
+--Yjs
+--@liveblocks/client 
+--@liveblocks/yjs

@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import { useDocumentData } from "react-firebase-hooks/firestore";
+import Editor from "./Editor";
 
 function Document({ id }: { id: string }) {
   const [data, loading, error] = useDocumentData(doc(db, "documents", id));
@@ -49,7 +50,10 @@ function Document({ id }: { id: string }) {
 
         {/* Avatars */}
       </div>
+
+      <hr className="pb-10"/>
       {/* Collaborative Editor */}
+      <Editor />
     </div>
   );
 }
