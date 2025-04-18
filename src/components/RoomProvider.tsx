@@ -6,6 +6,7 @@ import {
   RoomProvider as RoomProviderWrapper,
 } from "@liveblocks/react/suspense";
 import LoadingSpinner from "./LoadingSpinner";
+import LiveCursorProvider from "./LiveCursorProvider";
 
 function RoomProvider({
   roomId,

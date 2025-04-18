@@ -50,3 +50,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 --we go to firebase->service account->generate new private key and add it into service_key.json
 --react-firebase-hooks
 --LiveBlocks
+--framer-motion
+--@liveblocks/node
