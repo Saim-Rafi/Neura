@@ -6,6 +6,8 @@ import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import { useDocumentData } from "react-firebase-hooks/firestore";
 import Editor from "./Editor";
+import useOwner from "@/lib/useOwner";
+import DeleteDocument from "./DeleteDocument";
 
 function Document({ id }: { id: string }) {
   const [data, loading, error] = useDocumentData(doc(db, "documents", id));
@@ -41,7 +43,16 @@ function Document({ id }: { id: string }) {
           <Button disabled={isUpdating} type="submit">
             {isUpdating ? "Updating..." : "Update"}
           </Button>
+
+
           {/* IF */}
+          {isOwner && (
+            <>
+            {/* InviteUser */}
+            {/* Delete document */}
+            <DeleteDocument />
+            </>
+          )}
           {/* isOwner && InviteUser, deleteDocumnet */}
         </form>
       </div>
