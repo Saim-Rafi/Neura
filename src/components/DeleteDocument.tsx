@@ -12,6 +12,9 @@ import {
 import { Button } from "./ui/button";
 import { DialogClose } from "@radix-ui/react-dialog";
 import { usePathname, useRouter } from "next/navigation";
+import { deleteDocument } from "../../actions/actions";
+import { toast } from "sonner"
+
 
 function DeleteDocument() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,9 +32,9 @@ function DeleteDocument() {
       if (success) {
         setIsOpen(false);
         router.replace("/");
-        // toast.success("Room deleted successfully!");
+        toast.success("Room deleted successfully!");
       }else{
-        // toast.error("Failed to delete room");
+        toast.error("Failed to delete room");
       }
     });
   };
