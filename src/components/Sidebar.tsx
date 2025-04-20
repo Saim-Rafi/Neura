@@ -29,7 +29,7 @@ interface RoomDocument extends DocumentData {
   userId: string;
 }
 
-function Sidebar (){
+function Sidebar() {
   const { user } = useUser();
   const [groupedData, setGroupedData] = useState<{
     owner: RoomDocument[];
@@ -98,20 +98,20 @@ function Sidebar (){
             ))}
           </>
         )}
-      </div>
 
-      {/* Share with me */}
-      {groupedData.editor.length > 0 && (
-        <>
-          <h2 className="text-gray-500 font-semibold text-sm">
-            Shared with me
-          </h2>
-          {groupedData.editor.map((doc) => (
-            <SidebarOption key={doc.id} id={doc.id} href={`/doc/${doc.id}`} />
-          ))}
-        </>
-      )}
-      {/* Lists... */}
+        {/* Share with me */}
+        {groupedData.editor.length > 0 && (
+          <>
+            <h2 className="text-gray-500 font-semibold text-sm">
+              Shared with me
+            </h2>
+            {groupedData.editor.map((doc) => (
+              <SidebarOption key={doc.id} id={doc.id} href={`/doc/${doc.id}`} />
+            ))}
+          </>
+        )}
+        {/* Lists... */}
+      </div>
     </>
   );
   return (
@@ -133,6 +133,6 @@ function Sidebar (){
       <div className="hidden md:inline">{menuOptions}</div>
     </div>
   );
-};
+}
 
 export default Sidebar;
