@@ -30,11 +30,11 @@ function InviteUser() {
     if (!roomId) return;
 
     startTransition(async () => {
-      const { success } = await inviteUserToDocument(roomId,email);
+      const { success } = await inviteUserToDocument(roomId, email);
 
       if (success) {
         setIsOpen(false);
-        setEmail('');
+        setEmail("");
         toast.success("User added to room successfully!");
       } else {
         toast.error("Failed to add user to the room!");
@@ -48,11 +48,11 @@ function InviteUser() {
       </Button>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Are you absolutely sure?</DialogTitle>
+          <DialogTitle>Invite a user to collaborate!</DialogTitle>
           <DialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
+            Enter the email of the user you want to invite
           </DialogDescription>
+          <hr className="mt-5" />
         </DialogHeader>
 
         <form className="flex gap-2" onSubmit={handleInvite}>
