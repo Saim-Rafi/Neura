@@ -15,36 +15,34 @@ import { usePathname, useRouter } from "next/navigation";
 import { deleteDocument, inviteUserToDocument } from "../../actions/actions";
 import { toast } from "sonner";
 import { Input } from "./ui/input";
+import * as Y from "yjs";
+import { MessageCircleCode } from "lucide-react";
 
-function InviteUser() {
+function ChatToDocument({doc}: {doc: Y.Doc}) {
+  const [input, setInput] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isPending, startTransition] = useTransition();
   const [email, setEmail] = useState("");
+  const [summary,setSummary] = useState("");
+  const [question,setQuestion] = useState("");
   const pathname = usePathname();
   const router = useRouter();
 
-  const handleInvite = async (e: FormEvent) => {
+  const handleAskQuestion = async (e: FormEvent) => {
     e.preventDefault();
 
     const roomId = pathname.split("/").pop();
     if (!roomId) return;
 
-    startTransition(async () => {
-      const { success } = await inviteUserToDocument(roomId, email);
-
-      if (success) {
-        setIsOpen(false);
-        setEmail("");
-        toast.success("User added to room successfully!");
-      } else {
-        toast.error("Failed to add user to the room!");
-      }
-    });
+    
   };
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <Button asChild variant="outline">
-        <DialogTrigger>Invite</DialogTrigger>
+        <DialogTrigger>
+            <MessageCircleCode className="mr-2"/>
+            Chat to document
+        </DialogTrigger>
       </Button>
       <DialogContent>
         <DialogHeader>
@@ -71,4 +69,4 @@ function InviteUser() {
   );
 }
 
-export default InviteUser;
+export default ChatToDocument;

@@ -11,7 +11,8 @@ function DocumentPage ({
   };
 }) {
   return <div className="flex flex-col flex-1 min-h-screen">
-    <Document id={id} />
+    {/* <Document id={id} /> */}
+    Document page
   </div>;
 };
 

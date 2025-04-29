@@ -6,9 +6,13 @@ import liveblocks from "@/lib/liveblocks";
 // import { doc } from "firebase/firestore";
 
 export async function createNewDocument() {
-  auth.protect(); //if you go and access it without being authenticate ..it will throw you to the clerk login screen
+  //if you go and access it without being authenticate ..it will throw you to the clerk login screen
+  const { userId, sessionClaims } = await auth();
 
-  const { sessionClaims } = await auth();
+  if (!userId) {
+    // Not signed in — throw error or redirect
+    throw new Error("Unauthorized"); // or use a Clerk redirect
+  }
 
   const docCollectionRef = adminDb.collection("documents");
   const docRef = await docCollectionRef.add({
@@ -21,7 +25,7 @@ export async function createNewDocument() {
     .collection("rooms")
     .doc(docRef.id)
     .set({
-      userId: sessionClaims?.email,
+      userId: sessionClaims?.email!,
       role: "owner",
       createdAt: new Date(),
       roomId: docRef.id,
