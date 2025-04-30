@@ -22,7 +22,12 @@ function Document({ id }: { id: string }) {
     if (data) {
       setInput(data.title);
     }
+    if (!data) {
+      console.warn("No document found with this ID:", id);
+    }
   }, [data]);
+
+ 
 
   const updateTitle = (e: FormEvent) => {
     e.preventDefault();
