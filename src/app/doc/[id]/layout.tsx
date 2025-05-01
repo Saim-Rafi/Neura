@@ -23,34 +23,6 @@
 
 // export default DocLayout;
 
-// import { auth } from "@clerk/nextjs/server";
-// import RoomProviderWrapper from "../../../components/RoomProviderWrapper";
-
-// export default async function DocLayout({
-//   children,
-//   params: paramsPromise, // Type as Promise
-// }: {
-//   children: React.ReactNode;
-//   params: Promise<{ id: string }>;
-// }) {
-//   // Protect the route server-side
-//   const { userId, sessionClaims } = await auth();
-
-//   if (!userId) {
-//     // Not signed in — throw error or redirect
-//     throw new Error("Unauthorized"); // or use a Clerk redirect
-//   }
-
-//   // Await params in a server component
-//   const params = await paramsPromise;
-//   const id = params.id;
-
-//   return <RoomProviderWrapper id={id}>{children}</RoomProviderWrapper>;
-// }
-
-
-
-
 // import RoomProvider from "@/components/RoomProvider";
 // import { auth } from "@clerk/nextjs/server";
 
@@ -82,6 +54,12 @@ export default async function DocLayout({
   const params = await paramsPromise;
   const id = params.id;
 
-  auth.protect(); // Server-side authentication
+  // auth.protect(); // Server-side authentication
+  const { userId, sessionClaims } = await auth();
+
+  if (!userId) {
+    // Not signed in — throw error or redirect
+    throw new Error("Unauthorized"); // or use a Clerk redirect
+  }
   return <RoomProvider roomId={id}>{children}</RoomProvider>;
 }

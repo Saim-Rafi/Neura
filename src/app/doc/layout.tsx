@@ -1,12 +1,17 @@
-import LiveBlocksProvider from '@/components/LiveBlocksProvider'
-import React from 'react'
+// import LBP from "@/components/LBP";
+// import React from "react";
 
-function PageLayout ({children}:{children: React.ReactNode}) {
-  return (
-    <LiveBlocksProvider>
-      {children}
-    </LiveBlocksProvider>
-  )
+// function PageLayout({ children }: { children: React.ReactNode }) {
+//   return <LBP>{children}</LBP>;
+// }
+
+// export default PageLayout;
+
+import React from "react";
+
+function PageLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
 }
 
-export default PageLayout
+export default PageLayout;
+

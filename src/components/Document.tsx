@@ -27,8 +27,6 @@ function Document({ id }: { id: string }) {
     }
   }, [data]);
 
- 
-
   const updateTitle = (e: FormEvent) => {
     e.preventDefault();
     if (input.trim()) {
