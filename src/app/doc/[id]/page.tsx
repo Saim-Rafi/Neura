@@ -1,7 +1,7 @@
 // "use client";
 
 // import Document from "@/components/Document";
-// import React from "react";
+// import React, { useEffect } from "react";
 
 // function DocumentPage({
 //   params: { id },
@@ -10,8 +10,15 @@
 //     id: string;
 //   };
 // }) {
+
+//   // // Add direct console logging in the page component
+//   // useEffect(() => {
+//   //   console.log("Page component mounted with ID:", id);
+//   // }, [id]);
+  
 //   return (
 //     <div className="flex flex-col flex-1 min-h-screen">
+//       <h1 className="text-black text-xl p-4">Page is loading for ID: {id}</h1>
 //       <Document id={id} />
 //     </div>
 //   );

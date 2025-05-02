@@ -78,7 +78,7 @@ function Editor() {
         <TranslateDocument doc={doc} />
 
         {/* chatToDocument AI */}
-        <ChatToDocument doc={doc} />
+        {/* <ChatToDocument doc={doc} /> */}
 
         {/* Dark Mode */}
         <button className={style} onClick={() => setDarkMode(!darkMode)}>

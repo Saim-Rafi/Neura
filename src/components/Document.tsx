@@ -74,3 +74,23 @@ function Document({ id }: { id: string }) {
 }
 
 export default Document;
+
+// import React, { useEffect } from "react";
+
+// function Document({ id }: { id: string }) {
+//   console.log("Document component definition with ID:", id);
+//   useEffect(() => {
+//     // This will properly log to the console when the component mounts
+//     console.log("This is a document", id);
+//     document.title = `Document ${id}`;
+//   }, [id]);
+
+//   return (
+//     <div className="text-2xl text-black p-4 border border-gray-300 m-4 bg-gray-100">
+//       <h1>Document content for ID: {id}</h1>
+//       <p className="text-lg">If you can see this, the component is rendering.</p>
+//     </div>
+//   );
+// }
+
+// export default Document;
