@@ -6,7 +6,12 @@ if (!process.env.SERVICE_ACCOUNT_KEY) {
     throw new Error("Missing SERVICE_ACCOUNT_KEY in environment variables");
   }
   
-  const serviceKey = JSON.parse(process.env.SERVICE_ACCOUNT_KEY);
+  const rawServiceKey = JSON.parse(process.env.SERVICE_ACCOUNT_KEY);
+
+// Fix the private key formatting
+rawServiceKey.private_key = rawServiceKey.private_key.replace(/\\n/g, "\n");
+
+const serviceKey = rawServiceKey;
 
 let app: App;
 
