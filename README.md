@@ -134,8 +134,16 @@ npm run deploy
 ---
 
 # 📸 Screenshots
-Coming Soon!
-(You can add animated gifs or screenshots showing collaboration, editing, translation, and authentication here.)
+
+<img width="1440" alt="Screenshot 2025-05-04 at 1 45 03 AM" src="https://github.com/user-attachments/assets/90af29a3-77d2-4e1d-aead-ebc0434b8ec2" />
+
+<img width="1439" alt="Screenshot 2025-05-04 at 1 45 28 AM" src="https://github.com/user-attachments/assets/ffce98d3-010e-457e-99b5-d426540c5f55" />
+
+
+
+
+
+
 
 # 📜 License
 This project is licensed under the MIT License.
