@@ -62,7 +62,7 @@ function TranslateDocument({ doc }: { doc: Y.Doc }) {
     e.preventDefault();
 
     startTransition(async () => {
-      const documentData = doc.getText("document-store").toJSON();
+      const documentData = doc.get("document-store").toJSON();
 
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/translateDocument`,
@@ -72,7 +72,7 @@ function TranslateDocument({ doc }: { doc: Y.Doc }) {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            document: documentData,
+            documentData: documentData,
             targetLang: language,
           }),
         }
@@ -112,7 +112,7 @@ function TranslateDocument({ doc }: { doc: Y.Doc }) {
                 GPT {isPending ? "is thinking..." : "Says:"}
               </p>
             </div>
-            <p>{isPending ? "Thinking..." : <Markdown>{summary}</Markdown>}</p>
+            {isPending ? "Thinking..." : <Markdown>{summary}</Markdown>}
           </div>
         )}
 

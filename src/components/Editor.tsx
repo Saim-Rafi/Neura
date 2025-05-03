@@ -68,7 +68,7 @@ function Editor() {
 
   const style = `hover:text-white ${
     darkMode
-      ? "text-gray-300 bg-gray-700 hover:bg-gray-100 hover:text-gray-700"
+      ? "text-gray-300 bg-gray-700 hover:bg-gray-100 hover:text-gray-700 "
       : "text-gray-700 bg-gray-200 hover:bg-gray-300 hover:text-gray-700"
   }`;
   return (
@@ -78,10 +78,13 @@ function Editor() {
         <TranslateDocument doc={doc} />
 
         {/* chatToDocument AI */}
-        {/* <ChatToDocument doc={doc} /> */}
+        <ChatToDocument doc={doc} />
 
         {/* Dark Mode */}
-        <button className={style} onClick={() => setDarkMode(!darkMode)}>
+        <button
+          className={`p-3 rounded-full text-2xl ${style}`}
+          onClick={() => setDarkMode(!darkMode)}
+        >
           {darkMode ? <SunIcon /> : <MoonIcon />}
         </button>
       </div>
