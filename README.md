@@ -1,6 +1,9 @@
-# Neura
+# AI Powered - Neura
 
 [Live Demo 🚀](https://neura-delta.vercel.app/)
+
+<br>
+
 
 <p align="center">
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
@@ -12,6 +15,7 @@
   <img src="https://img.shields.io/badge/Clerk-005FCC?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHJ4PSIxNSIgZmlsbD0iIzAwNUZDQyIvPjwvc3ZnPg==" />
 </p>
 
+<br>
 
 **Neura** is a next-generation collaborative document platform — combining real-time editing, AI-assisted content creation, and translation into one seamless experience.
 
@@ -102,19 +106,16 @@ Save it as service_key.json in your project root.
 4. Configure Environment Variables
 Create a .env.local file:
 
-env
-Copy
-Edit
-NEXT_PUBLIC_CLERK_FRONTEND_API=your-clerk-frontend-api
-NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_API_KEY=your-liveblocks-public-key
-OPENAI_API_KEY=your-openai-api-key
-NEXT_PUBLIC_FIREBASE_API_KEY=your-firebase-api-key
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project-id.appspot.com
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-sender-id
-NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id
-(Adjust based on your Firebase and Clerk setup.)
+NEXT_PUBLIC_CLERK_FRONTEND_API=your-clerk-frontend-api <br>
+NEXT_PUBLIC_LIVEBLOCKS_PUBLIC_API_KEY=your-liveblocks-public-key<br>
+OPENAI_API_KEY=your-openai-api-key<br>
+NEXT_PUBLIC_FIREBASE_API_KEY=your-firebase-api-key<br>
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your-project-id.firebaseapp.com<br>
+NEXT_PUBLIC_FIREBASE_PROJECT_ID=your-project-id<br>
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your-project-id.appspot.com<br>
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your-sender-id<br>
+NEXT_PUBLIC_FIREBASE_APP_ID=your-app-id<br>
+(Adjust based on your Firebase and Clerk setup.)<br>
 
 5. Deploy Cloudflare Worker
 Install Cloudflare CLI c3 if you haven't:
